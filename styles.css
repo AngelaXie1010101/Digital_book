@@ -110,6 +110,13 @@ a { color: inherit; text-decoration: none; }
 .rocket-slot.has-part { border-style: solid; border-color: transparent; }
 .rocket-preview .rocket-window { cursor: pointer; }
 .rocket-preview .rocket-fin, .rocket-preview .rocket-engine { cursor: pointer; }
+.rocket-preview .rocket-window, .rocket-preview .rocket-fin, .rocket-preview .rocket-engine { opacity: .56; }
+.rocket-preview .rocket-window { border-style: dashed; border-color: var(--paper); background: rgba(255,248,231,.18); }
+.rocket-preview .rocket-fin, .rocket-preview .rocket-engine { border-style: dashed; border-color: var(--paper); }
+.rocket-preview .rocket-flame { opacity: 0; }
+.parts-tray { position: absolute; z-index: 4; top: 34%; right: 4%; display: grid; gap: 8px; width: 66px; }
+.parts-tray .part-option { width: 66px; min-height: 58px; box-shadow: 3px 3px 0 var(--ink); }
+.parts-tray .part-option.packed { opacity: .38; }
 .flight-rocket, .mars-rocket { z-index: 4; width: 118px; height: 190px; filter: drop-shadow(5px 7px 0 rgba(7,18,56,.48)); pointer-events: none; }
 .flight-rocket { position: absolute; left: 40%; bottom: 7%; transform: rotate(-15deg) scale(.78); }
 .art-card.launched .flight-rocket { animation: rocket-flight 2.7s cubic-bezier(.2,.75,.25,1) forwards; }
@@ -182,5 +189,5 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 580px) {
   .cover-page { min-height: 100svh; } .cover-image { object-position: 63% center; } .cover-brand { padding-top: 20px; } .brand-note { display: none; } .cover-copy { padding-top: 42vh; } .cover-copy h1 { font-size: 61px; letter-spacing: -3px; } .cover-copy p:not(.eyebrow) { max-width: 280px; font-size: 14px; }
   .story-page { padding-top: 17px; } .story-header .brand-lockup strong { font-size: 14px; } .story-header .brand-lockup small { display: none; } .story-header { width: calc(100% - 30px); } .cover-link { font-size: 11px; } .story-progress, .story-layout, .story-nav { width: calc(100% - 30px); } .story-progress { margin-top: 19px; margin-bottom: 22px; } .art-card, .art-image { min-height: 270px; } .story-copy h1 { font-size: 32px; } .story-copy > p { font-size: 15px; line-height: 1.6; } .story-nav { flex-wrap: wrap; } .page-number { order: -1; width: 100%; text-align: center; } .game-buttons { grid-template-columns: repeat(2, 1fr); } .build-parts { flex-wrap: wrap; } .build-part { min-width: calc(33.333% - 5px); }
-  .rocket-preview { left: 25%; width: 49%; min-width: 115px; height: 68%; } .flight-rocket, .mars-rocket { width: 84px; height: 135px; } .hotspot-message { max-width: calc(100% - 36px); bottom: 12px; } .telescope-hotspot { left: 40%; right: auto; bottom: 13%; } .supply-helmet { top: 25%; left: 53%; } .supply-wrench { bottom: 13%; left: 26%; } .supply-map { bottom: 11%; left: 62%; } .supply-water { top: 41%; left: 57%; } .dog-hotspot { top: 51%; right: 17%; } .launch-hotspot { top: 28%; left: 60%; } .crater-one { right: 19%; bottom: 23%; } .crater-two { right: 35%; bottom: 10%; } .lunch-hotspot { top: 57%; left: 45%; }
+  .rocket-preview { left: 25%; width: 49%; min-width: 115px; height: 68%; } .parts-tray { top: auto; right: 4%; bottom: 8%; display: flex; width: auto; } .parts-tray .part-option { width: 54px; min-height: 50px; } .flight-rocket, .mars-rocket { width: 84px; height: 135px; } .hotspot-message { max-width: calc(100% - 36px); bottom: 12px; } .telescope-hotspot { left: 40%; right: auto; bottom: 13%; } .supply-helmet { top: 25%; left: 53%; } .supply-wrench { bottom: 13%; left: 26%; } .supply-map { bottom: 11%; left: 62%; } .supply-water { top: 41%; left: 57%; } .dog-hotspot { top: 51%; right: 17%; } .launch-hotspot { top: 28%; left: 60%; } .crater-one { right: 19%; bottom: 23%; } .crater-two { right: 35%; bottom: 10%; } .lunch-hotspot { top: 57%; left: 45%; }
 }
